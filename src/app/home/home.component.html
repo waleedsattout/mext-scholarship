@@ -1,0 +1,65 @@
+<main>
+  <div class="container">
+    <header class="header">
+      <h1>أسئلة وأجوبة حول منحة ميكست</h1>
+      <p class="subtitle">دليل شامل حول برنامج منحة الحكومة اليابانية (MEXT)</p>
+    </header>
+
+     <div class="source-toggle">
+       <label class="toggle-label">
+         <input
+           type="checkbox"
+           [(ngModel)]="useEnhancedData"
+           (ngModelChange)="onSourceChange()"
+         >
+         <span class="toggle-slider"></span>
+         <span class="toggle-text">استخدام البيانات المحسنة بالذكاء الاصطناعي</span>
+       </label>
+       <div class="source-info">
+         <span class="source-badge" [class.original]="!useEnhancedData" [class.enhanced]="useEnhancedData">
+           {{ useEnhancedData ? 'AI-Enhanced' : 'البيانات الأصلية' }}
+         </span>
+       </div>
+     </div>
+
+    <div class="search-section">
+      <div class="search-box">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="ابحث في الأسئلة..."
+          [(ngModel)]="searchQuery"
+          (input)="onSearch()"
+        >
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="search-options">
+        <label class="toggle-label">
+          <input
+            type="checkbox"
+            [(ngModel)]="searchInAnswers"
+            (change)="onSearch()"
+          >
+          <span class="toggle-slider"></span>
+          <span class="toggle-text">البحث داخل الإجابات أيضاً</span>
+        </label>
+        <div class="results-count" *ngIf="searchQuery">
+          {{ filteredFaqs().length }} نتيجة من أصل {{ faqs().length }}
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <ng-container *ngFor="let faq of filteredFaqs(); let i = index">
+        <article class="faq-card">
+          <h2 class="faq-question">
+            <span class="faq-number">{{ i + 1 }}</span>
+            {{ faq.question }}
+          </h2>
+          <p class="faq-answer" [innerHTML]="faq.answer"></p>
+        </article>
+      </ng-container>
+    </div>
+  </div>
+</main>

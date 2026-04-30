@@ -1,0 +1,94 @@
+<main>
+  <div class="container">
+    <header class="header">
+      <h1>روابط مفيدة</h1>
+      <p class="subtitle">مجموعة من الروابط المفيدة والموارد المتعلقة بمنحة ميكست</p>
+    </header>
+
+    <div class="useful-links">
+      <h3>🔗 روابط هامة ومفيدة</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header" (click)="toggleAccordion('general')">
+            <span class="accordion-icon">{{ expandedAccordion === 'general' ? '▼' : '▶' }}</span>
+            <span>مواقع عامة ومفيدة</span>
+          </button>
+          <div class="accordion-content" [class.expanded]="true">
+            <a href="https://www.jpss.jp/en/" target="_blank" class="link-card">
+              <span class="link-icon">📄</span>
+              <span class="link-text">موقع JPSS الرسمي</span>
+            </a>
+            <a href="https://mymextscholarship.com/mext-scholarship-university-advisor-how-to-find/" target="_blank" class="link-card">
+              <span class="link-icon">🎓</span>
+              <span class="link-text">كيفية اختيار الأستاذ المشرف</span>
+            </a>
+            <a href="https://www.nippon.com/ar/features/h10024/" target="_blank" class="link-card">
+              <span class="link-icon">🇯🇵</span>
+              <span class="link-text">نبذة عن منحة ميكست</span>
+            </a>
+            <a href="https://www.global.tsukuba.ac.jp/why-tsukuba/" target="_blank" class="link-card">
+              <span class="link-icon">🏫</span>
+              <span class="link-text">جامعة تسوكوبا</span>
+            </a>
+            <a href="https://www.edlibre.com/%D9%85%D9%86%D8%AD%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D9%8A%D8%A7%D8%A8%D8%A7%D9%86-%D9%85%D9%86-%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-university-of-tsukuba/" target="_blank" class="link-card">
+              <span class="link-icon">📘</span>
+              <span class="link-text">الدراسة في جامعة تسوكوبا</span>
+            </a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" (click)="toggleAccordion('research')">
+            <span class="accordion-icon">{{ expandedAccordion === 'research' ? '▼' : '▶' }}</span>
+            <span>كتابة البحث والمقترحات</span>
+          </button>
+          <div class="accordion-content" [class.expanded]="true">
+            <a href="https://www.wikihow.com/Email-a-Professor" target="_blank" class="link-card">
+              <span class="link-icon">✉️</span>
+              <span class="link-text">كيفية كتابة إيميل لدكتور جامعة (ويكي هاو)</span>
+            </a>
+            <a href="https://ocw.mit.edu/courses/7-16-experimental-molecular-biology-biotechnology-ii-spring-2005/pages/scientific-comm/" target="_blank" class="link-card">
+              <span class="link-icon">🔬</span>
+              <span class="link-text">كتابة مقترح بحث علمي</span>
+            </a>
+            <a href="https://discover.hubpages.com/literature/10-Steps-to-Writing-a-Research-Proposal" target="_blank" class="link-card">
+              <span class="link-icon">📝</span>
+              <span class="link-text">10 خطوات لخطة البحث</span>
+            </a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" (click)="toggleAccordion('pdfs')">
+            <span class="accordion-icon">{{ expandedAccordion === 'pdfs' ? '▼' : '▶' }}</span>
+            <span>ملفات PDF</span>
+          </button>
+          <div class="accordion-content" [class.expanded]="true">
+            <a href="https://www.facebook.com/groups/250251958503275/permalink/2354726468055803/" target="_blank" class="link-card">
+              <span class="link-icon">📄</span>
+              <span class="link-text">دليل MEXT (Ahmad Almoustafa)</span>
+            </a>
+            <a href="https://www.jpf.go.jp/e/program/dl/guidelines_e_2025.pdf" target="_blank" class="link-card">
+              <span class="link-icon">📑</span>
+              <span class="link-text">دليل المنحة 2025 (PDF)</span>
+            </a>
+            <a href="https://flanker.ae/2020/09/01/%D9%85%D9%82%D8%A7%D8%A8%D9%84%D8%A9-%D9%85%D9%86%D8%AD%D8%A9-mext/?" target="_blank" class="link-card">
+              <span class="link-icon">💡</span>
+              <span class="link-text">مقابلة وتجارب منحة ميكست</span>
+            </a>
+            <a href="https://www.facebook.com/groups/250251958503275/permalink/1308037882724672/" target="_blank" class="link-card">
+              <span class="link-icon">💼</span>
+              <span class="link-text">مقابلة منحة ميكست (فيديو)</span>
+            </a>
+            <a href="https://www.facebook.com/download/1771601940300302/Japanese%20Government%20%28MEXT%29%20Scholarship%20-%20Ahmad%20Almoustafa.pdf?av=100008860427979&eav=Afk1Y_K9xRZ1UWl9NwoaWoRDcrRn_rBH44J9GrnY7PZ8ElWTyUOUR4Cie2lz&paipv=0&ext=1778089073&hash=Ac15-LuX-6D2kdymy5KZWwG4r9o&__cft__[0]=AZYDKRGYm5Nz35cEduyZSPOxjL00TMptmr20Me0622dUBGe5tCwhD760Xs0Kfi2p6Z0eB5ImsGqRnYmyI6gggtBQoi-1IPSYMvOi72FWsvr2LM9OEsI9oSdqaw78pBnE4Tq-jxiEDNuP_UeTWTBr22MvzRgzFtkxtw_hwrs5cAKOIA&__tn__=H-R" target="_blank" class="link-card">
+              <span class="link-icon">📄</span>
+              <span class="link-text">دليل المنحة MEXT - أحمد</span>
+            </a>
+            <a href="https://lookaside.fbsbx.com/file/Japanese%20Government%20%28MEXT%29%20Scholarship%20-%20Ahmad%20Almoustafa.pdf?token=AYQHkFm9cBvhwA0i3-f2Ha9UO9Idbp_wU8MnrbH9UTKwXltgp72GbojIH3hWCd1YynlvcZ-Kq3GEQDGoHi5LYy8PCJMSQ9Xg0PEW7tS2TQVI4ZfqHXpCZS5vpr25igyDR1u03AmxhjBO9PPnkndq07C51_B7-82z9Ei56Trordk9_SwuQNdmUdx9TuaCfi3ey25T8UrpTz3jHChCk7_5b1wrtMidfIwfAiQntM1OEAoYweQ1Hlf-D3HbcSfTd62XEV-Gy5gdUiMlP_KAKvpCO30XrAdr7PS2go03tP9PhoTHczUONoR86egLizLdjpCjby__2Jh9qJMw5fL_PzqaqnvBZ7WUe_yTDIbnoINRxqdI4DnTJTkpq2jR2S-K_P-RNQ0WQYaLkP-1ipKJ3QDb8sql1HNSIGTbBTCJ2A6YvA73CxvJLVsflZNFnfYee9LqnTd0CqGLEWeRjo_5U4i60KLTdskNd2NLlt65R_CUshmp53I8QguXhVj0FD-2FDtzlBSKecFoz1LP9iXdw-UbQWWvor6rxJK3OcZS1xBiMo3z1BhejrazRwaSUHkoz_AzumCJFRrI6sNXZx5LvOEtxAeWwr1oEh4zvrbFmfyVkttkuEPXSOmwSFxiooXKVLvEkE2i23O5HgB45bvAdIOI7hFuOrzl5eZasttdQzkFcmYZHehA1w3e8lp-jjE5ROFrE8GNnEo2a18ngpB8QC7EKoVQjU89s2Cfg0wVkSqaRMDpxAOXfL4hDt4DOA" target="_blank" class="link-card">
+              <span class="link-icon">📄</span>
+              <span class="link-text">دليل المنحة MEXT أحمد (بديل)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

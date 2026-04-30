@@ -1,0 +1,134 @@
+:host {
+    --primary: #1e3a8a;
+    --primary-light: #3b82f6;
+    --accent: #f59e0b;
+    --accent-light: #fef3c7;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --bg: #f9fafb;
+    --white: #ffffff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Navigation Styles */
+  .navbar {
+    background: var(--primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .nav-brand .nav-link {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    text-decoration: none;
+  }
+
+  .nav-brand .nav-link:hover {
+    color: var(--accent) !important;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .nav-item {
+    display: flex;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.9375rem;
+  }
+
+  .nav-link:hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link.active {
+    color: var(--white);
+    background: var(--accent);
+    font-weight: 600;
+  }
+
+  main {
+    min-height: calc(100vh - 120px); /* Account for nav and footer */
+  }
+
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--bg);
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .footer-text {
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
+
+  /* Responsive Navigation */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+    }
+
+    .nav-menu {
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    main {
+      min-height: calc(100vh - 140px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-brand .nav-link {
+      font-size: 1.1rem;
+    }
+
+    .nav-menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-text {
+      font-size: 0.8125rem;
+    }
+  }
