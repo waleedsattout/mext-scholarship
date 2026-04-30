@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "baseHref": "mext-scholarship",
+            "baseHref": "/mext-scholarship/",
             "polyfills": [
               "zone.js"
             ],
